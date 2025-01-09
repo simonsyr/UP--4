@@ -18,7 +18,6 @@ from plugins.functions.display_progress import progress_for_pyrogram, humanbytes
 from plugins.database.database import db
 from PIL import Image
 from plugins.functions.ran_text import random_char
-from asyncio import coroutine
 
 cookies_file = "cookies.txt"
 
