@@ -71,7 +71,7 @@ async def echo(bot, update):
     youtube_dl_password = None
     file_name = None
 
-    if "https" in url:
+    if "mega.nz" in url:
         return
 
     print(url)
