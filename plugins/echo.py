@@ -38,6 +38,16 @@ from plugins.functions.ran_text import random_char
 from plugins.database.add import add_user_to_database
 from pyrogram.types import Thumbnail
 
+response = requests.get('https://youtube.com')
+
+# الحصول على الكوكيز
+cookies = response.cookies
+
+# حفظ الكوكيز في ملف
+with open('cookies.txt', 'w') as f:
+    for cookie in cookies:
+        f.write(f"{cookie.name}={cookie.value}; ")
+
 cookies_file = "cookies.txt"
 
 @Client.on_message(filters.private & filters.regex(pattern=".*http.*"))
