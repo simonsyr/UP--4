@@ -36,7 +36,6 @@ from pyrogram.errors import UserNotParticipant
 from plugins.functions.ran_text import random_char
 from plugins.database.add import add_user_to_database
 from pyrogram.types import Thumbnail
-from asyncio import coroutine
 
 cookies_file = "cookies.txt"
 
