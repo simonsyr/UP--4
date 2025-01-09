@@ -1,4 +1,4 @@
-# ©️ LISA-KOREA | @LISA_FAN_LK | NT_BOT_CHANNEL
+
 
 import os
 import re
@@ -18,6 +18,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
 from PIL import Image
 from plugins.config import Config
 import time
@@ -69,6 +70,9 @@ async def echo(bot, update):
     youtube_dl_username = None
     youtube_dl_password = None
     file_name = None
+
+    if "https" in url:
+        return
 
     print(url)
     if "|" in url:
